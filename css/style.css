@@ -92,7 +92,7 @@
     justify-content: center;
 }
 
-.parent {
+.centrage {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,9 +121,6 @@
     top: 30px;
     right: 30px;
 }
-
-
-
 .seconde {
     float: left;
     margin-left: 420px;
@@ -140,17 +137,19 @@
 
 .presentation {
     background-color: #dadada;
-    height: 1000px;
+    height: auto;
+    padding-bottom: 40px;
 }
 
 .rectangle {
-    width: 40%;
+    width: 80%;
     height: 350px;
     border: 10px solid #7f7f7a;
-    float: left;
-    margin-top: 100px;
-    margin-left: 100px;
 }
 .lettre-pad {
     padding-right: 52px;
+}
+
+.marg-top {
+    margin-top: 50px;
 }
