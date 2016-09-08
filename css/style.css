@@ -1,6 +1,20 @@
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .no-pad {
     padding-right: 0px;
     padding-left: 0px;
+}
+
+.no-pad-right {
+    padding-right: 0px;
 }
 
 .img-background {
@@ -69,10 +83,8 @@
 
 .taille {
     background-color: #007f7f;
-    width: 170px;
-    height: 250px;
-    margin-left: 95px;
-    float: left;
+    width: 70%;
+    height: 190px;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -96,20 +108,27 @@
 
 .chrono {
     color: white;
-    font-size: 250px;
+    font-size: 14vw;
 }
 
 .heure {
     color: #dadada;
-    font-size: 210px;
-    font-weight: 600;
+    font-size: 12vw;
+    font-weight: 500;
     font-family: 'Open Sans', sans-serif;
-    float: left;
-    margin-left: 30px;
+    position: relative;
+    top: 30px;
+    right: 30px;
 }
 
 .minute {
-    margin-left: 420px;
+    color: #dadada;
+    font-size: 12vw;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    top: 30px;
+    right: 30px;
 }
 
 .seconde {
