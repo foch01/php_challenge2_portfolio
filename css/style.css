@@ -153,3 +153,10 @@
 .marg-top {
     margin-top: 50px;
 }
+
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: #2b3348;
+    color: #dedede;
+}
