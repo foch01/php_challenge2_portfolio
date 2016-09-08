@@ -67,7 +67,8 @@
 .background {
     background-color: #00cbcb;
     width: 100%;
-    height: 1000px;
+    height: auto;
+    padding-bottom: 50px;
 }
 
 .titre-2 {
@@ -111,7 +112,7 @@
     font-size: 14vw;
 }
 
-.heure {
+.lettre{
     color: #dadada;
     font-size: 12vw;
     font-weight: 500;
@@ -121,15 +122,7 @@
     right: 30px;
 }
 
-.minute {
-    color: #dadada;
-    font-size: 12vw;
-    font-weight: 500;
-    font-family: 'Open Sans', sans-serif;
-    position: relative;
-    top: 30px;
-    right: 30px;
-}
+
 
 .seconde {
     float: left;
@@ -157,4 +150,7 @@
     float: left;
     margin-top: 100px;
     margin-left: 100px;
+}
+.lettre-pad {
+    padding-right: 52px;
 }
