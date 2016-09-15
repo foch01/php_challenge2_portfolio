@@ -12,7 +12,6 @@
     padding-right: 0px;
     padding-left: 0px;
 }
-
 .no-pad-right {
     padding-right: 0px;
 }
@@ -23,12 +22,12 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 700px;
+    height: 100%;
 }
 
 .rectangle-1 {
     width: 100%;
-    height: 700px;
+    min-height: 100vh;
     background-color: black;
     background-color: rgba(0, 0, 0, 0.5);
     background-size: cover;
@@ -67,7 +66,7 @@
 .background {
     background-color: #00cbcb;
     width: 100%;
-    height: auto;
+    min-height: 100vh;
     padding-bottom: 50px;
 }
 
@@ -159,4 +158,9 @@
     height: 150px;
     background-color: #2b3348;
     color: #dedede;
+}
+
+.section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
