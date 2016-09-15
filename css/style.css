@@ -82,10 +82,10 @@
 }
 
 .taille {
-    background-color: #007f7f;
-    width: 70%;
-    height: 190px;
-    border-radius: 50px;
+    background-color: #003F4D;
+    width: 70px;
+    height: 100px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,7 +98,7 @@
 }
 
 .barre {
-    background-color: #004040;
+    background-color: #00687F;
     width: 100%;
     height: 5px;
     display: flex;
@@ -108,7 +108,7 @@
 
 .chrono {
     color: white;
-    font-size: 14vw;
+    font-size: 7vw;
 }
 
 .lettre{
@@ -163,4 +163,45 @@
 .section {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+}
+
+.menu {
+    width: 100%;
+    height: 20vh;
+    background-color: #003F4D;
+    display: flex;
+    justify-content: space-between;
+    /*justify-content: center;*/
+    align-items: center;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3vh;
+}
+
+.carre {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+}
+
+.item-1 {
+    margin-left: 40px;
+}
+
+.item-4 {
+    margin-right: 40px;
+}
+
+.alignement {
+    display: flex;
+    background-color: #00D1FF;
+}
+
+.section-2 {
+    background-color: #00687F;
+}
+
+.conteneur {
+    display: flex;
+    flex-direction: column;
 }

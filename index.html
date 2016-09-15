@@ -21,16 +21,19 @@
 
 <body>
     <div class="container-fluid">
-   <div class="arrow bounce" id="apparait"></div>
         <div id="fullpage">
             <div class="section">
                 <div class="row">
                     <div class="no-pad col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="img-responsive img-background">
+                            <a class="arrow bounce"></a>
                             <div class="rectangle-1 text-center">
                                 <div class="rectangle-2">
                                     <h1 class="titre-1">Je suis Thomas Sanceo</h1>
-                                    <h3 class="titre-3">Développeur Web & Mobile</h3> </div>
+                                    <div id="console2">
+                                        <h3 class="titre-3" id="consoleText2"></h3>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -39,7 +42,88 @@
             <div class="section">
                 <div class="row">
                     <div class="no-pad col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="background">
+                        <div class="row">
+                            <div class="no-pad col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="menu">
+                                    <div class="item-1">A propos</div>
+                                    <div class="carre"></div>
+                                    <div class="item-2">Compétences</div>
+                                    <div class="auteur">Thomas</div>
+                                    <div class="item-3">Portfolio</div>
+                                    <div class="carre"></div>
+                                    <div class="item-4">Contact</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="section-2 no-pad col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="row centrage">
+                                    <div class="alignement centrage no-pad col-xs-12 col-sm-10 col-md-10 col-lg-10 compteur">
+                                       <div class="titre-2">Passioné par le Web depuis :
+                                       </div>                                   <div class="centrage">
+                                            <div class="taille">
+                                                <div class="barre">
+                                                    <div class="chrono">1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="centrage">
+                                            <div class="taille">
+                                                <div class="barre">
+                                                    <div class="chrono">1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="centrage">
+                                            <div class="taille">
+                                                <div class="barre">
+                                                    <div class="chrono">1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="centrage">
+                                            <div class="taille">
+                                                <div class="barre">
+                                                    <div class="chrono">1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="centrage">
+                                            <div class="taille">
+                                                <div class="barre">
+                                                    <div class="chrono">1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="centrage">
+                                            <div class="taille">
+                                                <div class="barre">
+                                                    <div class="chrono">1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="centrage">
+                                            <div class="taille">
+                                                <div class="barre">
+                                                    <div class="chrono">1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="centrage">
+                                            <div class="taille">
+                                                <div class="barre">
+                                                    <div class="chrono">1</div>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div> 
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--                        <div class="background">
                             <h2 class="titre-2 text-center">Passioné par le web depuis :</h2>
                             <div class="row centrage">
                                 <div class="centrage col-xs-12 col-sm-2 col-md-2 col-lg-2">
@@ -119,10 +203,7 @@
                                     <div class="lettre lettre-pad">S</div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </div>-->
             <div class="section">
                 <div class="row">
                     <div class="no-pad col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -156,15 +237,47 @@
         </div>
     </div>
     <script>
-  $(window).scroll(function(){
-        alert(2);   
-    })
+        /*Effet machine à Ecrire*/
+
+        var text = 'Développeur Web & Mobile';
+        var currentChar = 1;
+        var htmltag = false;
+        var cache = '';
+
+
+        function type() {
+            var str = text.substr(0, currentChar);
+            var last = str.substr(str.length - 1, str.length);
+            if (last != '<' && last != '>' & last != '/') {
+                $("#consoleText2").html(str);
+            }
+            currentChar++;
+            if (currentChar <= text.length) {
+                if (last == '<') {
+                    htmltag = true;
+                } else if (last == '>') {
+                    htmltag = false;
+                }
+                if (htmltag) {
+                    setTimeout(type, 10);
+                } else {
+                    setTimeout(type, 90);
+                }
+            }
+        }
+
         $(document).ready(function () {
+            $("#consoleText2").html("");
+            setTimeout(type, 500);
+        })
+
+        $(document).ready(function () {
+
             $('#fullpage').fullpage({
                 //Navigation
                 menu: '#menu',
                 lockAnchors: false,
-                anchors: ['firstPage', 'secondPage', 'thpage', 'forpage'],
+                anchors: ['firstPage', 'secondPage'],
                 navigation: false,
                 navigationPosition: 'right',
                 navigationTooltips: ['firstSlide', 'secondSlide'],
