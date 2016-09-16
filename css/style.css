@@ -136,7 +136,7 @@
 
 .presentation {
     background-color: #dadada;
-    height: auto;
+    height: 80vh;
     padding-bottom: 40px;
 }
 
@@ -171,7 +171,6 @@
     background-color: #003F4D;
     display: flex;
     justify-content: space-between;
-    /*justify-content: center;*/
     align-items: center;
     color: white;
     font-family: 'Open Sans', sans-serif;
@@ -199,9 +198,71 @@
 
 .section-2 {
     background-color: #00687F;
+    height: 80vh;
 }
 
 .conteneur {
     display: flex;
     flex-direction: column;
+}
+
+.bio {
+    background-color: #00D1FF;
+    height: 70vh;
+}
+
+.img-1 {
+    background-image: url(../img/profil.jpg);
+    width: 100%;
+    height: 60vh;
+    background-size:cover;
+    background-position: center;
+    
+}
+
+.img-1 {
+    margin-top: 35px;
+    border: 2px solid #00687F;
+}
+
+.text-presentation {
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin-top: 45px;
+}
+
+.btn-contact {
+    margin-top: 90px;
+    text-transform: uppercase;
+    background-color: #013F4E;
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    border: 1px solid #00687F;
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.btn-contact:hover {
+    background-color: #00687F;
+}
+
+.auteur {
+    background-image: url(../img/thomas.jpg);
+    height: 100px;
+    width: 270px;
+    background-size: cover;
+    background-position: center;
+}
+
+.lien {
+    color: white;
+    text-decoration: none;
+}
+.lien:hover {
+    color: white;
+    text-decoration: none;
 }
