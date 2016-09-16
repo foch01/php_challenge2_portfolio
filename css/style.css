@@ -136,13 +136,13 @@
 
 .presentation {
     background-color: #dadada;
-    height: 80vh;
+    height: 100vh;
     padding-bottom: 40px;
 }
 
 .rectangle {
     width: 80%;
-    height: 350px;
+    height: 40vh;
     border: 10px solid #7f7f7a;
 }
 .lettre-pad {
@@ -265,4 +265,20 @@
 .lien:hover {
     color: white;
     text-decoration: none;
+}
+
+.da-thumbs {
+    height: 0;
+}
+
+.da-thumbs li{
+    background-color: #7f7f7a;
+}
+
+.port-1 {
+    background-image: url(../img/create-pro.png);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 200px;
 }
