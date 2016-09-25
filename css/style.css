@@ -175,14 +175,14 @@ body {
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-size: 3vh;
+    position:fixed;
+    z-index: 999;
     
     
  -webkit-transition: all 0.9s cubic-bezier(0.895, 0.030, 0.685, 0.220);  
     -moz-transition: all 0.9s cubic-bezier(0.895, 0.030, 0.685, 0.220);  
       -o-transition: all 0.9s cubic-bezier(0.895, 0.030, 0.685, 0.220); 
          transition: all 0.9s cubic-bezier(0.895, 0.030, 0.685, 0.220); 
-    position:fixed;
-    z-index: 999;
 }
 
 .fixed{
