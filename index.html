@@ -53,11 +53,11 @@
                         <div class="row">
                             <div class="no-pad col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="menu">
-                                    <a class="item-1 lien" href="#">A propos</a>
+                                    <a class="item-1 lien" href="#secondpage">A propos</a>
                                     <div class="carre"></div>
                                     <a class="item-2 lien" href="#">Compétences</a>
-                                    <a class="auteur"></a>
-                                    <a class="item-3 lien" href="#">Portfolio</a>
+                                    <a href="#firstpage" class="auteur"></a>
+                                    <a class="item-3 lien" href="#thirdpage">Portfolio</a>
                                     <div class="carre"></div>
                                     <a class="item-4 lien" href="#">Contact</a>
                                 </div>
@@ -156,7 +156,7 @@
                     </div>
                 </div>-->
                 <div class="row presentation">
-                    <div class="col-sm-12 no-pad">
+                    <div class="col-sm-12 no-pad margin">
                         <ul id="da-thumbs" class="da-thumbs">
                             <li>
                                 <a href="#">
@@ -292,7 +292,7 @@
                 //Navigation
                 menu: '#menu',
                 lockAnchors: false,
-                anchors: ['firstPage', 'secondPage'],
+                anchors: ['firstpage', 'secondpage','thirdpage'],
                 navigation: false,
                 navigationPosition: 'right',
                 navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -302,11 +302,11 @@
 
                 //Scrolling
                 css3: true,
-                scrollingSpeed: 700,
+                scrollingSpeed: 500,
                 autoScrolling: true,
                 fitToSection: true,
-                fitToSectionDelay: 1000,
-                scrollBar: false,
+                fitToSectionDelay: 700,
+                scrollBar: true,
                 easing: 'easeInOutCubic',
                 easingcss3: 'ease',
                 loopBottom: false,
@@ -346,10 +346,19 @@
                 slideSelector: '.slide',
 
                 //events
-                onLeave: function (index, nextIndex, direction) {},
+                onLeave: function (index, nextIndex, direction) {        //leaving 1st section
+        if(index == 1){
+           $('.menu').addClass('fixed');
+        }
+        //back to the 1st section
+        if(nextIndex == 1){
+			$('.menu').removeClass('fixed');
+        }},
                 afterLoad: function (anchorLink, index) {},
                 afterRender: function () {},
-                afterResize: function () {},
+                afterResize: function () {
+                    windowsHeight = $(window).height();
+                },
                 afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {},
                 onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {}
             });
